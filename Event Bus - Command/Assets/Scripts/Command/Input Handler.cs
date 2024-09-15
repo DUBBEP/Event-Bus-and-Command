@@ -1,4 +1,4 @@
-using UnityEditor;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class InputHandler : MonoBehaviour
@@ -56,6 +56,11 @@ public class InputHandler : MonoBehaviour
                 _isReplaying = true;
                 _invoker.Replay();
             }
+        }
+
+        if (GUILayout.Button("Switch To Event Bus"))
+        {
+            SceneManager.LoadScene("EventBus");
         }
     }
 }
